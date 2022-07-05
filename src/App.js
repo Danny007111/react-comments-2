@@ -12,15 +12,17 @@ function App() {
       <NavBar/>
       <Switch>
 
-        <Route exact path="/"
-          element={<Home/>} 
-        />
-        <Route exact path="/QuoteForm"
-        element={<QuoteForm/>} 
-        />
-        <Route exact path="/QuoteListContainer"
-          element={<QuoteListContainer/>} 
-        />
+      <Route exact path="/">
+          <Home />
+        </Route>
+    
+        <Route path="/QuoteForm">
+          <QuoteForm />
+        </Route>
+
+        <Route path="/QuoteListContainer">
+          <QuoteListContainer />
+        </Route>
 
       </Switch>
     </div>

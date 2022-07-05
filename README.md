@@ -1,6 +1,14 @@
 # Comments app
 > I have included a backend server at the following GitHub URL: [https://github.com/Danny007111/backend-phase-2-comments](https://github.com/Danny007111/backend-phase-2-comments)
 
+This project is intended to help students search for a quote of their liking and also contribute to write new quotes as well.
+ 
+## navigation 
+Once the app starts, you will be introduced to the main component where "Home" is located. Home contains instructions on how to navigate the app.
+
+To create a new quote you will simply click on the "Add-Comment" box in the upper left corner. 
+
+To view the current list of quotes, click on the "Comment-Section" box.
 
 # Getting Started with Create React App
 

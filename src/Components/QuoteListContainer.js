@@ -7,23 +7,22 @@ function GifListContainer() {
     const [quote, setQuote] = useState([]);
 
     useEffect(() => {
-        fetch(`https://github.com/Danny007111/backend-phase-2-comments`)
+        fetch(`https://backend-phase-2-comments.herokuapp.com/comments`)
         .then((r) => r.json())
         .then((data) => {
-            console.log(data)
-            // const newQuote = data.map((quotes) => quotes.comment);
-            // setQuote(newQuote);
+            setQuote(data);  
         })
-    }, [quote])
-
+    }, [])
+   
     function handleAddQuote(newQuote){
         setQuote([...quote, newQuote])
     }
 
   return (
     <div>
-      <Quote quotes={quote}/>
       <QuoteForm onAddQuote={handleAddQuote}/>
+      <Quote quotes={quote}/>
+      
       
     </div>
   );

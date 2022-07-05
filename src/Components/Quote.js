@@ -1,12 +1,13 @@
-function Quote({quote}) {
+function Quote({quotes}) {
+  const displayQuotes = quotes.map((quote) => (
+    <li key={quote.id}>
+      {quote.name}: {quote.comment}
+    </li>
+  ))
 
     return (
       <ul>
-        {quote.map((quot) => (
-          <li key={quot}>
-            {quot}
-          </li>
-        ))}
+        {displayQuotes}
       </ul>
     );
   }

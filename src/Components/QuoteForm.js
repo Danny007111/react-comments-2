@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 
+
 function QuoteForm({ onAddQuote }) {
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
 
-  // Add function to handle submissions
+
+
   function handleSubmit(e) {
     e.preventDefault();
     const QuoteData = {
       name: name,
       comment: comment,
     };
-    fetch("https://github.com/Danny007111/backend-phase-2-comments", {
+    fetch("https://backend-phase-2-comments.herokuapp.com/comments", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -46,7 +48,8 @@ function QuoteForm({ onAddQuote }) {
         </input>
       </label>
 
-      <button type="submit">Add to List</button>
+      <button type="submit">Add to List</button >
+      <p>After you are done writing your new quote, navigate to "Comment-Section" of the app to see your quote.</p>
     </form>
   );
 }
